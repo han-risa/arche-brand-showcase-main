@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Circular Std';
+  src: url('/src/assets/circular-std-medium-500.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&display=swap');
+
+@layer base {
+  :root {
+    --background: 35 50% 96%;
+    --foreground: 201 56% 23%;
+
+    --card: 35 50% 97%;
+    --card-foreground: 201 56% 23%;
+
+    --popover: 35 50% 98%;
+    --popover-foreground: 201 56% 23%;
+
+    --primary: 201 56% 23%;
+    --primary-foreground: 35 50% 96%;
+
+    --secondary: 175 54% 64%;
+    --secondary-foreground: 201 56% 23%;
+
+    --muted: 35 30% 90%;
+    --muted-foreground: 201 20% 50%;
+
+    --accent: 35 64% 52%;
+    --accent-foreground: 35 50% 96%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 35 30% 88%;
+    --input: 35 30% 90%;
+    --ring: 201 56% 23%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 35 50% 97%;
+    --sidebar-foreground: 201 56% 23%;
+    --sidebar-primary: 201 56% 23%;
+    --sidebar-primary-foreground: 35 50% 96%;
+    --sidebar-accent: 35 30% 92%;
+    --sidebar-accent-foreground: 201 56% 23%;
+    --sidebar-border: 35 30% 90%;
+    --sidebar-ring: 201 56% 23%;
+  }
+
+  .dark {
+    --background: 201 56% 15%;
+    --foreground: 35 50% 96%;
+    --card: 201 56% 20%;
+    --card-foreground: 35 50% 96%;
+    --popover: 201 56% 20%;
+    --popover-foreground: 35 50% 96%;
+    --primary: 35 50% 96%;
+    --primary-foreground: 201 56% 23%;
+    --secondary: 175 54% 50%;
+    --secondary-foreground: 35 50% 96%;
+    --muted: 201 30% 25%;
+    --muted-foreground: 35 30% 70%;
+    --accent: 35 64% 52%;
+    --accent-foreground: 35 50% 96%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 201 30% 25%;
+    --input: 201 30% 25%;
+    --ring: 35 50% 96%;
+    --sidebar-background: 201 56% 12%;
+    --sidebar-foreground: 35 50% 96%;
+    --sidebar-primary: 35 50% 96%;
+    --sidebar-primary-foreground: 201 56% 23%;
+    --sidebar-accent: 201 30% 25%;
+    --sidebar-accent-foreground: 35 50% 96%;
+    --sidebar-border: 201 30% 25%;
+    --sidebar-ring: 35 50% 96%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Circular Std', sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: 'Circular Std', sans-serif;
+  }
+}
