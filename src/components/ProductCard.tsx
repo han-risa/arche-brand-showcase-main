@@ -76,6 +76,14 @@ const ProductCard = ({
               {product.weight}
             </p>
           )}
+          {product.price && (
+            <p
+              className="text-sm text-foreground font-medium"
+              style={{ fontFamily: "'JetBrains Mono', monospace" }}
+            >
+              {product.price}
+            </p>
+          )}
           <div className="pt-2">
             <span
               className="inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase text-primary group-hover:text-foreground transition-colors"

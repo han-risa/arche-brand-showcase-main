@@ -62,13 +62,13 @@ const ProductDetail = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
-              className="relative w-full aspect-[3/4] max-h-[80vh] bg-card overflow-hidden"
+              className="relative w-full h-auto max-h-[80vh] bg-card overflow-hidden"
             >
               {product.image ? (
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="w-full h-auto object-contain"
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center">
@@ -152,6 +152,22 @@ const ProductDetail = () => {
                   {product.category}
                 </p>
               </div>
+              {product.price && (
+                <div>
+                  <p
+                    className="text-xs text-muted-foreground/60 tracking-wider uppercase mb-1"
+                    style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                  >
+                    Price
+                  </p>
+                  <p
+                    className="text-sm text-foreground"
+                    style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                  >
+                    {product.price}
+                  </p>
+                </div>
+              )}
             </div>
 
             {/* Content sections based on type */}
@@ -171,7 +187,10 @@ const ProductDetail = () => {
               )}
 
               {isBeautyFragrance && (
-                <FragranceNotes notes={product.ingredients} />
+                <>
+                  <FragranceNotes notes={product.ingredients} />
+                  <SpecTable specs={product.specs} />
+                </>
               )}
             </div>
           </motion.div>

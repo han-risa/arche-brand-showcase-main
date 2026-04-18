@@ -9,6 +9,7 @@ export interface Product {
   ingredients?: string[];
   benefits?: string[];
   specs?: Record<string, string>;
+  price?: string;
 }
 
 export const products: Product[] = [
@@ -28,6 +29,7 @@ export const products: Product[] = [
       "Membantu mengurangi tanda penuaan kulit",
       "Membantu melindungi kulit dari sinar matahari",
     ],
+    price: "Rp.75.000,-",
   },
   {
     id: "shera-whitening-body-booster",
@@ -55,6 +57,7 @@ export const products: Product[] = [
       "Membantu mengencangkan kulit",
       "Membuat kulit tampak sehat",
     ],
+    price: "Rp.75.000,-",
   },
   {
     id: "shera-premium-whitening-body-lotion",
@@ -81,13 +84,14 @@ export const products: Product[] = [
       "Membantu mengencangkan kulit",
       "Membuat kulit tampak sehat",
     ],
+    price: "Rp.135.000,-",
   },
   {
     id: "shisha-charcoal-briquettes",
     name: "Shisha Charcoal Briquettes",
     brand: "Charcoal Products",
     category: "Material",
-    image: "/images/shisha-charcoal-3.png",
+    image: "/images/shisha-charcoal.png",
     description: "Premium 100% coconut charcoal briquettes for shisha. 99% crack free, odorless, smokeless, chemical free.",
     specs: {
       Moisture: "3.23 - 3.34%",
@@ -105,7 +109,7 @@ export const products: Product[] = [
     name: "BBQ Charcoal Briquettes",
     brand: "Charcoal Products",
     category: "Material",
-    image: "/images/bbq-charcoal-1.png",
+    image: "/images/bbq-charcoal.png",
     description: "Premium 100% coconut charcoal briquettes for BBQ. Long burning time with high calorie output.",
     specs: {
       Moisture: "4.3 - 5.5%",
@@ -121,47 +125,87 @@ export const products: Product[] = [
   {
     id: "solsol-terra",
     name: "TERRA — Masculien",
-    brand: "Sol Sol & Ash",
+    brand: "Sol & Ash",
     category: "Beauty & Care",
-    description: "Aroma hutan yang misterius dan alami dengan aroma kayu dan asap yang kuat.",
-    image: "/images/terra.png",
-    ingredients: ["Incense Smoke", "Natural Oud", "Vanilla"],
+    weight: "30 ml",
+    description: "Terinspirasi dari hutan yang misterius dan aroma bumi. Dengan perpaduan aroma woody dan smoky yang intens, Terra membangkitkan gambaran jejak langkah di antara pepohonan kuno, aroma tanah basah. Cocok digunakan saat malam hari atau acara yang lebih serius.",
+    image: "/images/solterra.png",
+    ingredients: ["Saffron", "Lavender", "Nutmeg", "Incense Smoke", "Natural Oud", "Tobacco Leaf", "Cinnamon", "Geranium", "Amber", "Vanilla Absoulte", "Sandalwood", "Patchouli", "Musk"],
+    specs: {
+      "Type": "Eau de Parfum",
+      "Character": "Woody, Earthy, Smoky",
+      "Longevity": "6-8+ Jam",
+      "Target": "Unisex / Masculine"
+    },
+    price: "Rp.120.000,-",
   },
   {
     id: "solsol-soie",
     name: "SOIE — Feminine",
-    brand: "Sol Sol & Ash",
+    brand: "Sol & Ash",
     category: "Beauty & Care",
-    description: "Pesona lembut dan misterius dari kain yang beraroma harum.",
-    image: "/images/soie.png",
-    ingredients: ["Berries", "Vanilla", "Musk"],
+    weight: "30 ml",
+    description: "Terinspirasi dari kelembutan dan pesona misterius sehelai kain. Dengan aroma manis yang memikat, Soie membisikkan cerita tentang tatapan mata wanita yang penuh rahasia dan sentuhan lembut yang menghanyutkan. Cocok digunakan saat suasana malam hari atau acara formal.",
+    image: "/images/solsoie.png",
+    ingredients: ["Berries", "Orange Blossom", "Jasmine", "Vanilla", "Almond Cream", "Musk", "Tonka Bean", "Sandalwood"],
+    specs: {
+      "Type": "Eau de Parfum",
+      "Character": "Elegan dan Sensual",
+      "Longevity": "6-8+ Jam",
+      "Target": "Unisex / Feminine"
+    },
+    price: "Rp.120.000,-",
   },
   {
     id: "solsol-calore",
     name: "CALORE — Unisex",
-    brand: "Sol Sol & Ash",
+    brand: "Sol & Ash",
     category: "Beauty & Care",
-    description: "Kehangatan senja melalui keindahan matahari terbenam.",
-    image: "/images/calore.png",
-    ingredients: ["Mandarin Orange", "Jasmine", "Vanilla"],
+    weight: "30 ml",
+    description: "Terinspirasi dari hangatnya senja. Varian Calore menceritakan keindahan matahari terbenam yang terpancar dari gambar jeruk yang cerah dan hangat. Cocok digunakan saat sore hingga malam hari, memberikan nuansa hangat, bersemangat, dan menenangkan.",
+    image: "/images/solcalore.png",
+    ingredients: ["Pear", "Bergamot", "Lavender", "Mandarin Orange", "Jasmine", "Orange Blossom", "Rose", "White Flowers", "Vanilla", "Tonka Bean", "Cedarwood", "Musk"],
+    specs: {
+      "Type": "Eau de Parfum",
+      "Character": "Hangat dan misterius",
+      "Longevity": "6-8+ Jam",
+      "Target": "Unisex"
+    },
+    price: "Rp.120.000,-",
   },
   {
     id: "solsol-sora",
     name: "SORA — Unisex",
-    brand: "Sol Sol & Ash",
+    brand: "Sol & Ash",
     category: "Beauty & Care",
-    description: "Dingin yang menyegarkan di puncak gunung.",
-    image: "/images/sora.png",
-    ingredients: ["Lemon Zest", "Lavender", "Musk"],
+    weight: "30 ml",
+    description: "Terinspirasi dari kesegaran puncak gunung es yang dingin dan udara yang bersih. Aroma lemon yang cerah dan dingin dibalik pegunungan, memberikan sensasi kebersihan. Cocok digunakan saat suasana pagi hingga siang hari.",
+    image: "/images/solsora.png",
+    ingredients: ["Bergamot", "Grapefruit", "Mint", "Lemon Zest", "Ginger", "Geranium", "Lavender", "Sage", "Cedarwood", "Sandalwood", "White Musk", "Amberwood", "Patchouli"],
+    specs: {
+      "Type": "Eau de Parfum",
+      "Character": "Fresh dan Cool",
+      "Longevity": "6-8+ Jam",
+      "Target": "Unisex"
+    },
+    price: "Rp.120.000,-",
   },
   {
     id: "solsol-shootaspire",
     name: "SHOOTASPIRE — Unisex",
-    brand: "Sol Sol & Ash",
+    brand: "Sol & Ash",
     category: "Beauty & Care",
-    description: "Aroma segar dan akuatik yang membangkitkan sensasi berada di tengah laut.",
-    image: "/images/shootaspire.png",
-    ingredients: ["Geranium", "Sage", "Cedarwood"],
+    weight: "30 ml",
+    description: "Terinspirasi dari hamparan laut yang luas dan biru, serta kesegaran ombak. Aroma fresh dan aquatic-nya membangkitkan sensasi berada di tengah laut. Cocok digunakan saat suasana pagi hingga siang hari untuk kesan energik dan bebas.",
+    image: "/images/solshootaspire.png",
+    ingredients: ["Bergamot", "Lavender", "Pineapple", "Pepper", "Geranium", "Sage", "Ambroxan", "Vetiver", "Cedarwood", "White Musk", "Patchouli", "Amberwood"],
+    specs: {
+      "Type": "Eau de Parfum",
+      "Character": "Fresh, Cool, Aquatic",
+      "Longevity": "6-8+ Jam",
+      "Target": "Unisex"
+    },
+    price: "Rp.120.000,-",
   },
 ];
 
