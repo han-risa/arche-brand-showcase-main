@@ -103,6 +103,7 @@ export const products: Product[] = [
       "Raw Material": "100% Coconut Charcoal",
       "Ash Color": "White",
     },
+    price: "Rp.18.000,-",
   },
   {
     id: "bbq-charcoal-briquettes",
@@ -121,6 +122,7 @@ export const products: Product[] = [
       "Raw Material": "100% Coconut Charcoal",
       "Ash Color": "White",
     },
+    price: "Rp.28.000,-",
   },
   {
     id: "solsol-terra",
