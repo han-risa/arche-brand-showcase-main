@@ -176,13 +176,14 @@ const ProductDetail = () => {
                 <>
                   <IngredientList ingredients={product.ingredients} />
                   <BenefitsList benefits={product.benefits} />
+                  {product.specs && <SpecTable specs={product.specs} />}
                 </>
               )}
 
               {isMaterial && (
                 <>
                   <SpecTable specs={product.specs} />
-                  <BenefitsList benefits={product.benefits} />
+                  <BenefitsList benefits={product.variants} title="Variants" />
                 </>
               )}
 

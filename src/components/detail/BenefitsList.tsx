@@ -1,6 +1,12 @@
 import { motion } from "framer-motion";
 
-const BenefitsList = ({ benefits }: { benefits?: string[] }) => {
+const BenefitsList = ({
+  benefits,
+  title = "Benefits",
+}: {
+  benefits?: string[];
+  title?: string;
+}) => {
   if (!benefits || benefits.length === 0) return null;
 
   return (
@@ -9,7 +15,7 @@ const BenefitsList = ({ benefits }: { benefits?: string[] }) => {
         className="text-xs tracking-[0.2em] uppercase text-primary mb-4"
         style={{ fontFamily: "'JetBrains Mono', monospace" }}
       >
-        Benefits
+        {title}
       </p>
       <div className="space-y-3">
         {benefits.map((b, i) => (
